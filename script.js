@@ -37,23 +37,11 @@ form.addEventListener('submit', (e) => {
   waLink.rel = 'noopener,noreferrer';
   waLink.click();
 
-  const formData = new FormData(form);
-  formData.append('_gotcha', '');
-  fetch('https://formspree.io/f/xjgqqaay', {
-    method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  }).then(() => {
-    feedback.className = 'form-feedback success';
-    feedback.textContent = `Gracias, ${name}. Te he enviado un email de confirmación y me llega tu consulta por WhatsApp.`;
-  }).catch(() => {
-    feedback.className = 'form-feedback success';
-    feedback.textContent = `Gracias, ${name}. Te responderé pronto.`;
-  }).finally(() => {
-    form.reset();
-    btn.textContent = originalText;
-    btn.disabled = false;
-  });
+  form.reset();
+  btn.textContent = originalText;
+  btn.disabled = false;
+  feedback.className = 'form-feedback success';
+  feedback.textContent = `Gracias, ${name}. Te responderé lo antes posible por WhatsApp.`;
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
