@@ -22,9 +22,34 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
-  feedback.className = 'form-feedback success';
-  feedback.textContent = `Gracias, ${name}. Te responderé pronto a ${email}.`;
-  form.reset();
+  const phone = document.getElementById('phone').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  const waBody = `Hola, soy ${name}.${phone ? ` Teléfono: ${phone}` : ''}${email ? ` Email: ${email}` : ''}\n\n${message}`;
+  window.open(`https://wa.me/34644176695?text=${encodeURIComponent(waBody)}`, '_blank', 'noopener,noreferrer');
+
+  const formData = new FormData(form);
+  formData.append('_gotcha', '');
+  fetch('https://formspree.io/f/xjgqqaay', {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  }).then(() => {
+    feedback.className = 'form-feedback success';
+    feedback.textContent = `Gracias, ${name}. Te he enviado un email de confirmación y me llega tu consulta por WhatsApp.`;
+  }).catch(() => {
+    feedback.className = 'form-feedback success';
+    feedback.textContent = `Gracias, ${name}. Te responderé pronto.`;
+  }).finally(() => {
+    form.reset();
+    btn.textContent = originalText;
+    btn.disabled = false;
+  });
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
