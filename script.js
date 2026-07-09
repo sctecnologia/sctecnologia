@@ -31,7 +31,11 @@ form.addEventListener('submit', (e) => {
   btn.disabled = true;
 
   const waBody = `Hola, soy ${name}.${phone ? ` Teléfono: ${phone}` : ''}${email ? ` Email: ${email}` : ''}\n\n${message}`;
-  window.open(`https://wa.me/34644176695?text=${encodeURIComponent(waBody)}`, '_blank', 'noopener,noreferrer');
+  const waLink = document.createElement('a');
+  waLink.href = `https://wa.me/34644176695?text=${encodeURIComponent(waBody)}`;
+  waLink.target = '_blank';
+  waLink.rel = 'noopener,noreferrer';
+  waLink.click();
 
   const formData = new FormData(form);
   formData.append('_gotcha', '');
