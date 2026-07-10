@@ -86,13 +86,6 @@
     &::before { content: '// '; }
   }
 
-  .code-prompt {
-    font-family: var(--font-code);
-    color: var(--color-accent);
-    font-weight: 500;
-    font-size: 0.9375rem;
-  }
-
   .code-output {
     font-family: var(--font-code);
     color: var(--color-primary);
@@ -628,11 +621,7 @@
     padding: 2px 0;
   }
 
-  .service-features .code-prompt {
-    color: var(--color-accent);
-    font-weight: 600;
-    opacity: 0.6;
-  }
+
 
   .service-price {
     font-family: var(--font-code);
@@ -883,8 +872,9 @@
     display: block;
     margin-bottom: 4px;
     &::before {
-      content: '$ ';
+      content: '◆ ';
       color: var(--color-accent);
+      font-size: 0.6rem;
     }
   }
 
