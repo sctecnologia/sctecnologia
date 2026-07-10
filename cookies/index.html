@@ -111,7 +111,10 @@
         <p>Si desactivas las cookies técnicas, algunas funcionalidades del sitio pueden verse afectadas.</p>
 
         <h2>Consentimiento</h2>
-        <p>Al navegar por nuestro sitio web por primera vez, se muestra un aviso informativo sobre el uso de cookies. Al continuar navegando, consideramos que aceptas su uso en los términos descritos en esta política.</p>
+        <p>Al navegar por nuestro sitio web por primera vez, se muestra un aviso informativo sobre el uso de cookies. Puedes aceptarlas o rechazarlas. Tu elección se guarda durante un año.</p>
+
+        <p style="margin-top: 20px;">Si cambias de opinión, puedes <strong>revocar tu consentimiento</strong> pulsando el botón inferior. El banner de cookies volverá a mostrarte las opciones disponibles.</p>
+        <button class="btn btn-outline" onclick="revocarConsentimiento()" style="margin-top:8px;">Revocar consentimiento de cookies</button>
 
         <h2>Actualizaciones</h2>
         <p>Esta política de cookies puede ser actualizada periódicamente. Te recomendamos revisarla cada cierto tiempo. Última actualización: julio de 2026.</p>
@@ -161,7 +164,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p>© 2026 SC Tecnología — <a href="../aviso-legal/">Aviso Legal</a> — <a href="../privacidad/">Privacidad</a> — <a href="../cookies/">Cookies</a></p>
+        <p>© 2026 SC Tecnología — <a href="../aviso-legal/">Aviso Legal</a> — <a href="../privacidad/">Privacidad</a> — <a href="../cookies/">Cookies</a> — <a href="#" onclick="revocarConsentimiento(); return false;">Revocar cookies</a></p>
         <p class="footer-made">Made with dedication in Valencia</p>
       </div>
     </div>
@@ -176,6 +179,7 @@
       <p>Usamos cookies propias y de terceros para mejorar tu experiencia. Si sigues navegando, consideramos que aceptas su uso. <a href="../cookies/" target="_blank">Más información</a></p>
       <div class="cookie-banner-actions">
         <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Aceptar</button>
+        <button class="cookie-btn cookie-btn-reject" id="cookieReject">Rechazar</button>
       </div>
     </div>
   </aside>

@@ -65,23 +65,49 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // === COOKIE CONSENT BANNER ===
 const cookieBanner = document.getElementById('cookieBanner');
 const cookieAccept = document.getElementById('cookieAccept');
+const cookieReject = document.getElementById('cookieReject');
 
 function getCookie(name) {
   return document.cookie.split('; ').find(row => row.startsWith(name + '='));
 }
 
+function hideCookieBanner() {
+  cookieBanner.classList.remove('show');
+  setTimeout(() => { cookieBanner.style.display = 'none'; }, 400);
+}
+
+function setCookieConsent(value) {
+  document.cookie = 'cookies_accepted=' + value + '; max-age=31536000; path=/; SameSite=Lax';
+}
+
 if (cookieBanner && cookieAccept) {
-  // Solo mostrar si no ha aceptado ya
+  // Solo mostrar si no ha respondido ya
   if (!getCookie('cookies_accepted')) {
-    // Pequeño retardo para que aparezca con la animación
     setTimeout(() => cookieBanner.classList.add('show'), 500);
   }
 
   cookieAccept.addEventListener('click', () => {
-    // Guardar consentimiento por 1 año
-    document.cookie = 'cookies_accepted=1; max-age=31536000; path=/; SameSite=Lax';
-    cookieBanner.classList.remove('show');
-    // Ocultar después de la animación
-    setTimeout(() => { cookieBanner.style.display = 'none'; }, 400);
+    setCookieConsent('1');
+    hideCookieBanner();
   });
+
+  if (cookieReject) {
+    cookieReject.addEventListener('click', () => {
+      setCookieConsent('rejected');
+      hideCookieBanner();
+    });
+  }
 }
+
+// Función global para revocar consentimiento desde la página de cookies
+window.revocarConsentimiento = function() {
+  // Borrar la cookie de consentimiento
+  document.cookie = 'cookies_accepted=; max-age=0; path=/; SameSite=Lax';
+  // Mostrar el banner de nuevo
+  if (cookieBanner) {
+    cookieBanner.style.display = '';
+    setTimeout(() => cookieBanner.classList.add('show'), 100);
+    // Hacer scroll al banner
+    cookieBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};

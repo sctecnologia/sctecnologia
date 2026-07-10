@@ -1193,6 +1193,18 @@
   transform: translateY(-1px);
 }
 
+.cookie-btn-reject {
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.cookie-btn-reject:hover {
+  color: var(--color-white);
+  border-color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.05);
+}
+
 .cookie-btn-more {
   background: transparent;
   color: rgba(255,255,255,0.7);
