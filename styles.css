@@ -571,8 +571,9 @@
     }
   }
 
-  .service-card:nth-child(2) { margin-top: 32px; }
-  .service-card:nth-child(5) { margin-top: -64px; grid-column: 2 / 4; }
+  .service-card:nth-child(2) { margin-top: 32px; position: relative; z-index: 1; }
+  .service-card:nth-child(3) { position: relative; z-index: 1; }
+  .service-card:nth-child(5) { margin-top: -28px; grid-column: 2 / 4; position: relative; z-index: 0; }
 
   .service-header {
     display: flex;
