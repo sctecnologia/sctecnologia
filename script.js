@@ -6,6 +6,7 @@ if (menuToggle && nav) {
     const isOpen = nav.classList.toggle('open');
     menuToggle.classList.toggle('active');
     menuToggle.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
   document.querySelectorAll('.nav-link').forEach(link => {
@@ -13,6 +14,7 @@ if (menuToggle && nav) {
       nav.classList.remove('open');
       menuToggle.classList.remove('active');
       menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     });
   });
 }
