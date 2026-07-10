@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios — SC Tecnología | Planes y servicios informáticos para autónomos</title>
+  <meta name="description" content="Planes y precios de SC Tecnología: suscripciones desde 15€/mes, proyectos web desde 300€ y packs para autónomos desde 39€/mes. Sin sorpresas, sin letra pequeña.">
+  <link rel="canonical" href="https://www.sctecnologia.es/precios/">
+
+  <meta property="og:title" content="Precios — SC Tecnología | Planes y servicios informáticos">
+  <meta property="og:description" content="Planes claros y precios transparentes para autónomos y pymes. Suscripciones, proyectos y packs todo en uno.">
+  <meta property="og:url" content="https://www.sctecnologia.es/precios/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Precios — SC Tecnología | Planes y servicios informáticos">
+  <meta name="twitter:description" content="Planes claros y precios transparentes para autónomos y pymes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../img/logo-icon.svg">
+  <link rel="apple-touch-icon" href="../img/logo-icon.svg">
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    .pricing-hero {
+      padding: 140px 0 64px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-white) 100%);
+    }
+
+    .pricing-hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(22, 58, 95, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(242, 140, 28, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .pricing-hero-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .pricing-hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .pricing-hero h1 span {
+      background: linear-gradient(135deg, var(--color-primary) 40%, var(--color-accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .pricing-hero p {
+      font-size: 1.125rem;
+      color: var(--color-gray-500);
+      line-height: 1.65;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .pricing-nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .pricing-nav a {
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 100px;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      color: var(--color-gray-700);
+      transition: all 0.2s;
+    }
+
+    .pricing-nav a:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      background: rgba(242, 140, 28, 0.04);
+    }
+
+    .pricing-section {
+      padding: 80px 0;
+    }
+
+    .pricing-section:nth-child(even) {
+      background: var(--color-gray-50);
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+      background: rgba(242, 140, 28, 0.08);
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .pricing-section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .pricing-section-header h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .pricing-section-header p {
+      color: var(--color-gray-500);
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    .packs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .pack-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-md);
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .pack-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: 0 12px 40px rgba(22, 58, 95, 0.07);
+      transform: translateY(-3px);
+    }
+
+    .pack-card--featured {
+      border-color: var(--color-accent);
+      box-shadow: 0 8px 32px rgba(242, 140, 28, 0.1);
+      transform: scale(1.03);
+    }
+
+    .pack-card--featured:hover {
+      transform: scale(1.03) translateY(-3px);
+    }
+
+    .pack-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-accent);
+      color: var(--color-white);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .pack-name {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+
+    .pack-price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .pack-price sup {
+      font-size: 1rem;
+      font-weight: 600;
+      vertical-align: super;
+      margin-right: 2px;
+    }
+
+    .pack-price sub {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-gray-400);
+      vertical-align: baseline;
+      margin-left: 4px;
+    }
+
+    .pack-desc {
+      font-size: 0.875rem;
+      color: var(--color-gray-500);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .pack-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    .pack-features li {
+      font-size: 0.875rem;
+      color: var(--color-gray-700);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pack-features li::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: rgba(242, 140, 28, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4l2.5 2.5L9 1' stroke='%23F28C28' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .services-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .services-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+
+    .services-table th {
+      text-align: left;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-gray-400);
+      padding: 12px 16px 8px 16px;
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+
+    .services-table td {
+      padding: 16px;
+      border-bottom: 1px solid var(--color-gray-100);
+      vertical-align: top;
+    }
+
+    .services-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .services-table tr:hover td {
+      background: rgba(242, 140, 28, 0.02);
+    }
+
+    .services-table .service-name {
+      font-weight: 700;
+      color: var(--color-primary);
+      white-space: nowrap;
+    }
+
+    .services-table .service-desc-cell {
+      color: var(--color-gray-500);
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .services-table .service-price {
+      font-weight: 700;
+      color: var(--color-primary);
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .services-table .service-price small {
+      font-weight: 400;
+      color: var(--color-gray-400);
+      font-size: 0.75rem;
+    }
+
+    .note-box {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-md);
+      padding: 28px 32px;
+      margin-top: 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .note-box-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(242, 140, 28, 0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--color-accent);
+    }
+
+    .note-box h4 {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 4px;
+    }
+
+    .note-box p {
+      font-size: 0.875rem;
+      color: var(--color-gray-500);
+      line-height: 1.55;
+    }
+
+    .hybrid-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .hybrid-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      transition: all 0.3s ease;
+    }
+
+    .hybrid-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: 0 8px 28px rgba(22, 58, 95, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .hybrid-card h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 4px;
+    }
+
+    .hybrid-card .hybrid-sub {
+      font-size: 0.8125rem;
+      color: var(--color-gray-400);
+      margin-bottom: 16px;
+    }
+
+    .hybrid-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--color-gray-100);
+      font-size: 0.875rem;
+    }
+
+    .hybrid-price-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .hybrid-price-row .label {
+      color: var(--color-gray-700);
+      font-weight: 500;
+    }
+
+    .hybrid-price-row .price {
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .hybrid-hook {
+      margin-top: 16px;
+      background: rgba(242, 140, 28, 0.06);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 0.8125rem;
+      color: var(--color-primary);
+      font-weight: 600;
+      line-height: 1.5;
+      border-left: 3px solid var(--color-accent);
+    }
+
+    .cta-section {
+      padding: 80px 0;
+      background: var(--color-primary);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(242, 140, 28, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-white);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.65);
+      max-width: 500px;
+      margin: 0 auto 28px;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section .btn {
+      position: relative;
+      z-index: 1;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .faq-item {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-sm);
+      padding: 24px;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item:hover {
+      border-color: var(--color-accent);
+    }
+
+    .faq-item h3 {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 6px;
+    }
+
+    .faq-item p {
+      font-size: 0.875rem;
+      color: var(--color-gray-500);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 1024px) {
+      .packs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 640px;
+      }
+
+      .pack-card--featured {
+        transform: none;
+      }
+
+      .pack-card--featured:hover {
+        transform: translateY(-3px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pricing-hero {
+        padding: 120px 0 48px;
+      }
+
+      .pricing-hero h1 {
+        font-size: 2rem;
+      }
+
+      .pricing-section {
+        padding: 56px 0;
+      }
+
+      .pricing-section-header h2 {
+        font-size: 1.625rem;
+      }
+
+      .packs-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
+
+      .pack-card--featured {
+        transform: none;
+      }
+
+      .services-table {
+        font-size: 0.8125rem;
+      }
+
+      .services-table th,
+      .services-table td {
+        padding: 12px 10px;
+      }
+
+      .hybrid-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .note-box {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .cta-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href=".." class="logo" aria-label="SC Tecnología — Ir al inicio">
+        <img src="../img/logo-icon.svg" alt="" class="logo-img" aria-hidden="true">
+        <span class="logo-text"><span class="logo-sc">SC</span> <span class="logo-tech">Tecnología</span></span>
+      </a>
+      <nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="../#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="./" class="nav-link" style="color:var(--color-accent);">Precios</a></li>
+          <li><a href="../#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="../#contacto" class="nav-link nav-cta">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pricing-hero" aria-labelledby="pricing-hero-title">
+      <div class="pricing-hero-bg"></div>
+      <div class="container">
+        <div class="pricing-hero-inner">
+          <h1 id="pricing-hero-title">Precios <span>sin letra pequeña</span></h1>
+          <p>Planes pensados para autónomos y pymes. Sin compromisos, sin sorpresas. Sabes lo que pagas y lo que incluye desde el primer día.</p>
+          <nav class="pricing-nav" aria-label="Saltar a sección de precios">
+            <a href="#packs">Packs todo en uno</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#suscripciones">Suscripciones</a>
+            <a href="#hibridos">Híbridos</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="packs" aria-labelledby="packs-title">
+      <div class="container">
+        <div class="pricing-section-header">
+          <span class="section-label">Para autónomos</span>
+          <h2 id="packs-title">Packs todo en uno</h2>
+          <p>Todo lo que necesitas en un solo plan. Sin sumar servicios sueltos.</p>
+        </div>
+        <div class="packs-grid">
+          <article class="pack-card">
+            <div class="pack-name">Básico</div>
+            <div class="pack-price"><sup>€</sup>39<sub>/mes</sub></div>
+            <p class="pack-desc">Para autónomos que ya tienen web y necesitan mantenerla segura y activa.</p>
+            <ul class="pack-features">
+              <li>Mantenimiento web completo</li>
+              <li>Copias de seguridad semanales</li>
+              <li>Monitoreo de uptime</li>
+              <li>Soporte por email</li>
+            </ul>
+            <a href="../#contacto" class="btn btn-primary btn-block">Lo quiero</a>
+          </article>
+          <article class="pack-card pack-card--featured">
+            <div class="pack-badge">Recomendado</div>
+            <div class="pack-name">Profesional</div>
+            <div class="pack-price"><sup>€</sup>65<sub>/mes</sub></div>
+            <p class="pack-desc">Para quien necesita web cuidada y asistencia técnica sin complicaciones.</p>
+            <ul class="pack-features">
+              <li>Mantenimiento web completo</li>
+              <li>Soporte técnico remoto ilimitado</li>
+              <li>Copias de seguridad semanales</li>
+              <li>Monitoreo y alertas</li>
+              <li>Respuesta en menos de 24h</li>
+            </ul>
+            <a href="../#contacto" class="btn btn-primary btn-block">Lo quiero</a>
+          </article>
+          <article class="pack-card">
+            <div class="pack-name">Premium</div>
+            <div class="pack-price"><sup>€</sup>129<sub>/mes</sub></div>
+            <p class="pack-desc">Para negocios que quieren tranquilidad absoluta, con atención presencial incluida.</p>
+            <ul class="pack-features">
+              <li>Mantenimiento web completo</li>
+              <li>Soporte mixto (remoto + 1 visita presencial/mes)</li>
+              <li>Copias de seguridad automáticas</li>
+              <li>Seguridad y monitorización</li>
+              <li>Atención prioritaria</li>
+            </ul>
+            <a href="../#contacto" class="btn btn-primary btn-block">Lo quiero</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="container">
+        <div class="pricing-section-header">
+          <span class="section-label">Pago único</span>
+          <h2 id="proyectos-title">Servicios por proyecto</h2>
+          <p>Un pago, trabajo delimitado, sin compromiso mensual. Ideal para necesidades concretas.</p>
+        </div>
+        <div class="services-table-wrap">
+          <table class="services-table">
+            <thead>
+              <tr>
+                <th>Servicio</th>
+                <th>Qué incluye</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="service-name">Landing page</td>
+                <td class="service-desc-cell">Diseño, dominio .es (1 año), hosting (1 año), SEO básico, formulario contacto/WhatsApp</td>
+                <td class="service-price">300 € <small>único</small></td>
+              </tr>
+              <tr>
+                <td class="service-name">Web corporativa</td>
+                <td class="service-desc-cell">Hasta 5 páginas, dominio .es (1 año), hosting (1 año), SEO completo, integración redes</td>
+                <td class="service-price">600 € <small>único</small></td>
+              </tr>
+              <tr>
+                <td class="service-name">Web tienda básica</td>
+                <td class="service-desc-cell">Catálogo de productos, carrito, pasarela de pago, SEO, dominio y hosting incluidos</td>
+                <td class="service-price">900 € <small>único</small></td>
+              </tr>
+              <tr>
+                <td class="service-name">Auditoría informática</td>
+                <td class="service-desc-cell">Análisis de equipos, red, seguridad y copias. Informe con recomendaciones</td>
+                <td class="service-price">100 € <small>único</small></td>
+              </tr>
+              <tr>
+                <td class="service-name">Instalación / puesta a punto</td>
+                <td class="service-desc-cell">Instalación de SO, office, antivirus, configuración inicial de equipos</td>
+                <td class="service-price">60 € <small>único</small></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note-box">
+          <div class="note-box-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <h4>¿No ves lo que necesitas?</h4>
+            <p>Cada negocio es diferente. Si necesitas algo que no está aquí, cuéntamelo y te hago un presupuesto a medida. Sin compromiso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="suscripciones" aria-labelledby="suscripciones-title">
+      <div class="container">
+        <div class="pricing-section-header">
+          <span class="section-label">Mensual</span>
+          <h2 id="suscripciones-title">Suscripciones</h2>
+          <p>Servicio continuado. Pagas cada mes y yo me encargo de que todo funcione.</p>
+        </div>
+        <div class="services-table-wrap">
+          <table class="services-table">
+            <thead>
+              <tr>
+                <th>Plan</th>
+                <th>Qué incluye</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="service-name">Mantenimiento web</td>
+                <td class="service-desc-cell">Actualizaciones CMS/plugins, copias semanales, monitoreo uptime, soporte email</td>
+                <td class="service-price">30 € <small>/mes</small></td>
+              </tr>
+              <tr>
+                <td class="service-name">Soporte técnico remoto</td>
+                <td class="service-desc-cell">Asistencia vía escritorio remoto o videollamada. 2h/mes incluidas</td>
+                <td class="service-price">25 € <small>/mes</small></td>
+              </tr>
+              <tr>
+                <td class="service-name">Soporte técnico mixto</td>
+                <td class="service-desc-cell">Soporte remoto + 1 visita presencial al mes en Valencia y alrededores</td>
+                <td class="service-price">80 € <small>/mes</small></td>
+              </tr>
+              <tr>
+                <td class="service-name">Copias de seguridad</td>
+                <td class="service-desc-cell">Backup automático diario, verificación mensual, recuperación ante incidentes</td>
+                <td class="service-price">15 € <small>/mes</small></td>
+              </tr>
+              <tr>
+                <td class="service-name">Seguridad y monitorización</td>
+                <td class="service-desc-cell">Antivirus gestionado, monitorización de red, alertas, informes mensuales</td>
+                <td class="service-price">20 € <small>/mes</small></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note-box">
+          <div class="note-box-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h4>Sin permanencia</h4>
+            <p>Todas las suscripciones se pueden cancelar mensualmente. Sin cláusulas, sin penalizaciones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="hibridos" aria-labelledby="hibridos-title">
+      <div class="container">
+        <div class="pricing-section-header">
+          <span class="section-label">Lo mejor de ambos</span>
+          <h2 id="hibridos-title">Setup + suscripción</h2>
+          <p>Un proyecto inicial y después mantenemos lo que hemos construido juntos.</p>
+        </div>
+        <div class="hybrid-grid">
+          <article class="hybrid-card">
+            <h3>Google Ads</h3>
+            <p class="hybrid-sub">Atrae clientes con anuncios sin arriesgar</p>
+            <div class="hybrid-price-row">
+              <span class="label">Setup (configuración inicial)</span>
+              <span class="price">50 €</span>
+            </div>
+            <div class="hybrid-price-row">
+              <span class="label">Gestión mensual</span>
+              <span class="price">30 €/mes</span>
+            </div>
+            <div class="hybrid-price-row">
+              <span class="label">Inversión en anuncios</span>
+              <span class="price" style="color:var(--color-gray-400);">Tú pones lo que decides</span>
+            </div>
+            <div class="hybrid-hook">
+              Te ayudo a configurar tu primera campaña. Tú solo pagas lo que inviertes en anuncios, sin recargos. Si funciona, te quedas con la gestión.
+            </div>
+          </article>
+          <article class="hybrid-card">
+            <h3>Desarrollo web + mantenimiento</h3>
+            <p class="hybrid-sub">Tu web hecha y cuidada siempre</p>
+            <div class="hybrid-price-row">
+              <span class="label">Creación de la web</span>
+              <span class="price">300–900 €</span>
+            </div>
+            <div class="hybrid-price-row">
+              <span class="label">Mantenimiento mensual</span>
+              <span class="price">30 €/mes</span>
+            </div>
+            <div class="hybrid-hook">
+              Los 3 primeros meses de mantenimiento son gratis si contratas el desarrollo. Empieza ahorrando desde el día uno.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" style="background: var(--color-gray-50);" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="pricing-section-header">
+          <span class="section-label">Dudas frecuentes</span>
+          <h2 id="faq-title">Preguntas sobre precios</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>¿Hay permanencia en las suscripciones?</h3>
+            <p>No. Puedes darte de baja cuando quieras, sin aviso ni penalización.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Qué métodos de pago aceptas?</h3>
+            <p>Transferencia bancaria o Bizum. Para suscripciones, domiciliación bancaria.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿El precio incluye IVA?</h3>
+            <p>Todos los precios mostrados son sin IVA. Se aplicará el tipo correspondiente en la factura.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Ofreces presupuestos a medida?</p>
+            <p>Sí. Si tu caso no encaja en los planes, cuéntame qué necesitas y te preparo algo específico.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">¿Hablamos?</h2>
+        <p>Cuéntame qué necesitas y te ayudo a elegir el plan que mejor se adapta a tu negocio. Sin compromiso.</p>
+        <a href="../#contacto" class="btn btn-primary" style="background: var(--color-accent);">Solicitar presupuesto</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href=".." class="footer-logo">
+            <img src="../img/logo-icon-white.svg" alt="SC Tecnología" class="footer-logo-img">
+            <span>SC <span class="footer-logo-light">Tecnología</span></span>
+          </a>
+          <p class="footer-desc">Tu departamento IT de confianza. Desarrollo web, soporte técnico y mantenimiento informático para autónomos y pymes en Valencia.</p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Servicios</h4>
+          <ul>
+            <li><a href="../servicios/desarrollo-web/">Desarrollo web</a></li>
+            <li><a href="../servicios/mantenimiento-informatico/">Mantenimiento informático</a></li>
+            <li><a href="../servicios/soporte-tecnico/">Soporte técnico</a></li>
+            <li><a href="../servicios/bases-datos-aplicaciones/">Bases de datos</a></li>
+            <li><a href="../servicios/seguridad-copias-seguridad/">Seguridad y copias</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Empresa</h4>
+          <ul>
+            <li><a href="..">Inicio</a></li>
+            <li><a href="../#sobre-mi">Sobre mí</a></li>
+            <li><a href="../#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-heading">Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/34644176695" target="_blank" rel="noopener">+34 644 176 695</a></li>
+            <li><a href="mailto:contacto@sctecnologia.es">contacto@sctecnologia.es</a></li>
+            <li><span>Valencia, España</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 SC Tecnología. Todos los derechos reservados.</p>
+        <p class="footer-made"><a href="./" style="color:inherit;">Precios</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/34644176695" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="../script.js"></script>
+</body>
+</html>
