@@ -19,7 +19,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="img/logo-icon.svg">
   <link rel="apple-touch-icon" href="img/logo-icon.svg">
   <link rel="stylesheet" href="styles.css">
@@ -55,74 +55,20 @@
       { "@type": "Country", "name": "ES" }
     ],
     "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+34644176695",
-        "contactType": "customer service",
-        "availableLanguage": ["Español"],
-        "url": "https://wa.me/34644176695"
-      },
-      {
-        "@type": "ContactPoint",
-        "email": "contacto@sctecnologia.es",
-        "contactType": "sales",
-        "availableLanguage": ["Español"]
-      }
+      { "@type": "ContactPoint", "telephone": "+34644176695", "contactType": "customer service", "availableLanguage": ["Español"], "url": "https://wa.me/34644176695" },
+      { "@type": "ContactPoint", "email": "contacto@sctecnologia.es", "contactType": "sales", "availableLanguage": ["Español"] }
     ],
     "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Servicios informáticos",
+      "@type": "OfferCatalog", "name": "Servicios informáticos",
       "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Desarrollo web",
-            "description": "Webs profesionales, rápidas y a medida para autónomos y pymes.",
-            "url": "https://www.sctecnologia.es/servicios/desarrollo-web/"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Mantenimiento informático",
-            "description": "Equipos actualizados, seguros y sin fallos. Mantenimiento preventivo y correctivo.",
-            "url": "https://www.sctecnologia.es/servicios/mantenimiento-informatico/"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Soporte técnico",
-            "description": "Remoto o presencial en Valencia. Rápido, cercano y sin tecnicismos.",
-            "url": "https://www.sctecnologia.es/servicios/soporte-tecnico/"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Bases de datos y aplicaciones web",
-            "description": "Soluciones a medida para gestionar tus datos de forma eficiente.",
-            "url": "https://www.sctecnologia.es/servicios/bases-datos-aplicaciones/"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Seguridad y copias de seguridad",
-            "description": "Tus datos protegidos con copias automáticas y seguridad informática básica.",
-            "url": "https://www.sctecnologia.es/servicios/seguridad-copias-seguridad/"
-          }
-        }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desarrollo web", "description": "Webs profesionales, rápidas y a medida para autónomos y pymes.", "url": "https://www.sctecnologia.es/servicios/desarrollo-web/" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento informático", "description": "Equipos actualizados, seguros y sin fallos. Mantenimiento preventivo y correctivo.", "url": "https://www.sctecnologia.es/servicios/mantenimiento-informatico/" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Soporte técnico", "description": "Remoto o presencial en Valencia. Rápido, cercano y sin tecnicismos.", "url": "https://www.sctecnologia.es/servicios/soporte-tecnico/" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bases de datos y aplicaciones web", "description": "Soluciones a medida para gestionar tus datos de forma eficiente.", "url": "https://www.sctecnologia.es/servicios/bases-datos-aplicaciones/" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguridad y copias de seguridad", "description": "Tus datos protegidos con copias automáticas y seguridad informática básica.", "url": "https://www.sctecnologia.es/servicios/seguridad-copias-seguridad/" } }
       ]
     },
-    "sameAs": [
-      "https://wa.me/34644176695"
-    ]
+    "sameAs": [ "https://wa.me/34644176695" ]
   }
   </script>
 </head>
@@ -132,15 +78,14 @@
     <div class="container header-inner">
       <a href="." class="logo" aria-label="SC Tecnología — Ir al inicio">
         <img src="img/logo-icon.svg" alt="" class="logo-img" aria-hidden="true">
-        <span class="logo-text"><span class="logo-sc">SC</span> <span class="logo-tech">Tecnología</span></span>
+        <span class="logo-text"><span class="logo-bracket">[</span> SC Tecnología <span class="logo-bracket">]</span></span>
       </a>
       <nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
         <ul class="nav-list">
-          <li><a href="#servicios" class="nav-link">Servicios</a></li>
-          <li><a href="precios/" class="nav-link">Precios</a></li>
-          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-          <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
-          <li><a href="#contacto" class="nav-link nav-cta">Contacto</a></li>
+          <li><a href="#servicios" class="nav-link">servicios</a></li>
+          <li><a href="precios/" class="nav-link">precios</a></li>
+          <li><a href="#sobre-mi" class="nav-link">whoami</a></li>
+          <li><a href="#contacto" class="nav-link nav-cta">contacto</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -151,31 +96,45 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-bg"></div>
       <div class="container hero-inner">
         <div class="hero-content">
-          <span class="hero-badge">En Valencia y toda la Comunidad Valenciana</span>
+          <span class="hero-badge">system ready — valencia, es</span>
+          <p class="hero-prompt"><span class="hero-prompt-path">tu-departamento-it@sc</span>:~$ <span class="hero-cursor"></span></p>
           <h1 class="hero-title" id="hero-title">
-            <span class="hero-line hero-line--top">Tu departamento IT</span>
+            <span class="hero-line">Tu departamento IT</span>
             <span class="hero-line hero-line--accent">de confianza</span>
           </h1>
           <p class="hero-subtitle">Soluciones informáticas para autónomos y pequeñas empresas. Desarrollo web, soporte técnico, mantenimiento y seguridad. Sin tecnicismos, sin complicaciones.</p>
           <div class="hero-actions">
             <a href="#contacto" class="btn btn-primary">Solicitar presupuesto</a>
-            <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+            <a href="#servicios" class="btn btn-code">Ver servicios →</a>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-deco"></div>
-          <div class="hero-deco hero-deco--2"></div>
-          <img src="img/logo.svg" alt="" class="hero-logo-img">
+        <div class="hero-terminal terminal-window" aria-hidden="true">
+          <div class="terminal-header">
+            <span class="terminal-dot terminal-dot--red"></span>
+            <span class="terminal-dot terminal-dot--yellow"></span>
+            <span class="terminal-dot terminal-dot--green"></span>
+            <span class="terminal-title">sc@terminal:~/services</span>
+          </div>
+          <div class="terminal-body">
+            <span class="terminal-line terminal-line--prompt">ls -la servicios/</span>
+            <span class="terminal-line">drwxr-xr-x  sc  sc  128B  may 10  12:30  <span style="color:var(--color-accent)">.</span></span>
+            <span class="terminal-line">drwxr-xr-x  sc  sc  128B  may 10  12:30  <span style="color:var(--color-accent)">..</span></span>
+            <span class="terminal-line">drwxr-xr-x  sc  sc   32B  may 10  12:30  <span style="color:var(--color-terminal-green)">desarrollo-web/</span></span>
+            <span class="terminal-line">drwxr-xr-x  sc  sc   32B  may 10  12:30  <span style="color:var(--color-terminal-green)">mantenimiento/</span></span>
+            <span class="terminal-line">drwxr-xr-x  sc  sc   32B  may 10  12:30  <span style="color:var(--color-terminal-green)">soporte-tecnico/</span></span>
+            <span class="terminal-line">drwxr-xr-x  sc  sc   32B  may 10  12:30  <span style="color:var(--color-terminal-green)">bases-datos/</span></span>
+            <span class="terminal-line">drwxr-xr-x  sc  sc   32B  may 10  12:30  <span style="color:var(--color-terminal-green)">seguridad/</span></span>
+            <span class="terminal-line terminal-line--prompt"><span class="terminal-cursor"></span></span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="trusted" aria-label="Confían en SC Tecnología">
+    <section class="trusted" aria-label="Estadísticas de SC Tecnología">
       <div class="container">
-        <p class="trusted-label">Confianza que construimos día a día</p>
+        <p class="trusted-label">system status</p>
         <div class="trusted-grid">
           <div class="trusted-item">
             <span class="trusted-number">5+</span>
@@ -200,63 +159,115 @@
     <section class="services" id="servicios" aria-labelledby="services-title">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" id="services-title">Servicios informáticos para tu negocio</h2>
+          <span class="code-comment">services — catálogo de servicios informáticos</span>
+          <h2 class="section-title" id="services-title">Servicios para tu negocio</h2>
           <p class="section-desc">Tecnología sin complicaciones. Te ayudo con todo lo que tu negocio necesita para funcionar sin problemas, estés donde estés en la Comunidad Valenciana.</p>
         </div>
         <div class="services-grid">
+
           <article class="service-card">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <div class="service-header">
+              <span class="service-prompt">$</span>
+              <h3 class="service-title">desarrollo-web</h3>
             </div>
-            <h3 class="service-title">Desarrollo web</h3>
+            <div class="service-code-block">
+              <span class="cm"># Tu presencia online desde 300€</span>
+              <span><span class="kw">function</span> <span class="hl">landing</span>() {</span>
+              <span>  <span class="kw">return</span> {</span>
+              <span>    seo: <span class="str">'optimizado'</span>,</span>
+              <span>    speed: <span class="str">'rápido'</span>,</span>
+              <span>    responsive: <span class="hl">true</span></span>
+              <span>  }</span>
+              <span>}</span>
+            </div>
             <p class="service-desc">Webs profesionales, rápidas y optimizadas para que tus clientes te encuentren. Desde landing pages hasta tiendas online.</p>
-            <p class="service-price">Desde 300 €</p>
-            <a href="servicios/desarrollo-web/" class="service-link">Saber más →</a>
+            <p class="service-price">desde 300 €</p>
+            <a href="servicios/desarrollo-web/" class="service-link">ver más →</a>
           </article>
+
           <article class="service-card">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+            <div class="service-header">
+              <span class="service-prompt">$</span>
+              <h3 class="service-title">mantenimiento</h3>
             </div>
-            <h3 class="service-title">Mantenimiento informático</h3>
+            <div class="service-code-block">
+              <span class="cm"># Planes desde 25€/mes</span>
+              <span><span class="kw">while</span> (equipo.running) {</span>
+              <span>  equipo.update()</span>
+              <span>  equipo.clean()</span>
+              <span>  equipo.<span class="hl">optimize</span>()</span>
+              <span>  <span class="kw">await</span> sleep(<span class="str">'7d'</span>)</span>
+              <span>}</span>
+            </div>
             <p class="service-desc">Equipos actualizados, seguros y sin fallos. Mantenimiento preventivo y correctivo para que tú no pierdas tiempo.</p>
-            <p class="service-price">Desde 25 €/mes</p>
-            <a href="servicios/mantenimiento-informatico/" class="service-link">Saber más →</a>
+            <p class="service-price">desde 25 €/mes</p>
+            <a href="servicios/mantenimiento-informatico/" class="service-link">ver más →</a>
           </article>
+
           <article class="service-card">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <div class="service-header">
+              <span class="service-prompt">$</span>
+              <h3 class="service-title">soporte-técnico</h3>
             </div>
-            <h3 class="service-title">Soporte técnico</h3>
+            <div class="service-code-block">
+              <span class="cm"># Respuesta en &lt;24h</span>
+              <span><span class="kw">const</span> soporte = {</span>
+              <span>  remoto: <span class="hl">true</span>,</span>
+              <span>  presencial: <span class="str">'Valencia'</span>,</span>
+              <span>  idioma: <span class="str">'claro'</span>,</span>
+              <span>  esperas: <span class="hl">false</span></span>
+              <span>}</span>
+            </div>
             <p class="service-desc">Remoto o presencial en Valencia. Rápido, en español claro y sin esperas. De verdad.</p>
-            <p class="service-price">Desde 25 €/mes</p>
-            <a href="servicios/soporte-tecnico/" class="service-link">Saber más →</a>
+            <p class="service-price">desde 25 €/mes</p>
+            <a href="servicios/soporte-tecnico/" class="service-link">ver más →</a>
           </article>
+
           <article class="service-card">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <div class="service-header">
+              <span class="service-prompt">$</span>
+              <h3 class="service-title">bases-datos</h3>
             </div>
-            <h3 class="service-title">Bases de datos y aplicaciones</h3>
+            <div class="service-code-block">
+              <span class="cm"># Aplicaciones a medida</span>
+              <span>db.<span class="hl">query</span>(<span class="str">`</span></span>
+              <span><span class="str">  SELECT * FROM datos</span></span>
+              <span><span class="str">  WHERE eficiencia = true</span></span>
+              <span><span class="str">  ORDER BY claridad</span></span>
+              <span><span class="str">`</span>)</span>
+            </div>
             <p class="service-desc">Soluciones a medida para organizar, consultar y proteger tus datos. Automatiza procesos y toma mejores decisiones.</p>
-            <p class="service-price">Consulta presupuesto</p>
-            <a href="servicios/bases-datos-aplicaciones/" class="service-link">Saber más →</a>
+            <p class="service-price">consulta presupuesto</p>
+            <a href="servicios/bases-datos-aplicaciones/" class="service-link">ver más →</a>
           </article>
-          <article class="service-card service-card--wide">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+
+          <article class="service-card">
+            <div class="service-header">
+              <span class="service-prompt">$</span>
+              <h3 class="service-title">seguridad</h3>
             </div>
-            <h3 class="service-title">Seguridad y copias de seguridad</h3>
+            <div class="service-code-block">
+              <span class="cm"># Protegemos tu negocio</span>
+              <span><span class="kw">class</span> <span class="hl">Backup</span> {</span>
+              <span>  constructor() {</span>
+              <span>    this.automatico = <span class="hl">true</span></span>
+              <span>    this.<span class="hl">tranquilidad</span>()</span>
+              <span>  }</span>
+              <span>}</span>
+            </div>
             <p class="service-desc">Tus datos protegidos con copias automáticas y medidas de seguridad básicas. Duerme tranquilo.</p>
-            <p class="service-price">Desde 15 €/mes</p>
-            <a href="servicios/seguridad-copias-seguridad/" class="service-link">Saber más →</a>
+            <p class="service-price">desde 15 €/mes</p>
+            <a href="servicios/seguridad-copias-seguridad/" class="service-link">ver más →</a>
           </article>
+
         </div>
       </div>
     </section>
 
-    <section class="about" id="sobre-mi" aria-labelledby="about-title" data-number="01">
+    <section class="about" id="sobre-mi" aria-labelledby="about-title">
       <div class="container about-inner">
         <div class="about-content">
-          <span class="section-tag">Quién soy</span>
+          <span class="code-comment">whoami — sobre el fundador</span>
           <h2 class="section-title" id="about-title">Marco Antonio Sánchez Cáceres</h2>
           <p class="about-text">
             Soy el fundador de SC Tecnología. Ayudo a autónomos y pequeñas empresas de Valencia y la Comunidad Valenciana a aprovechar la tecnología de forma sencilla y asequible.
@@ -272,14 +283,24 @@
             <li>Honestidad</li>
           </ul>
         </div>
-        <div class="about-card">
-          <div class="about-card-inner">
-            <div class="about-avatar" aria-hidden="true">MS</div>
-            <h3>Marco Antonio Sánchez Cáceres</h3>
-            <p class="about-role">Desarrollo web · Soporte IT · Mantenimiento</p>
-            <div class="about-contact-row">
-              <a href="mailto:contacto@sctecnologia.es" class="about-contact-link">contacto@sctecnologia.es</a>
-            </div>
+        <div class="about-terminal terminal-window" aria-hidden="true">
+          <div class="terminal-header">
+            <span class="terminal-dot terminal-dot--red"></span>
+            <span class="terminal-dot terminal-dot--yellow"></span>
+            <span class="terminal-dot terminal-dot--green"></span>
+            <span class="terminal-title">sc@terminal:~</span>
+          </div>
+          <div class="terminal-body">
+            <span class="terminal-line terminal-line--prompt">whoami</span>
+            <span class="terminal-line terminal-line--highlight">Marco Antonio Sánchez Cáceres</span>
+            <span class="terminal-line" style="margin-top:8px;"></span>
+            <span class="terminal-line terminal-line--prompt">cat /home/sc/profile.txt</span>
+            <span class="terminal-line">Desarrollo web · Soporte IT · Mantenimiento</span>
+            <span class="terminal-line" style="margin-top:8px;"></span>
+            <span class="terminal-line terminal-line--prompt">echo $CONTACT</span>
+            <span class="terminal-line"><span style="color:var(--color-accent)">contacto</span>@sctecnologia.es</span>
+            <span class="terminal-line" style="margin-top:8px;"></span>
+            <span class="terminal-line terminal-line--prompt"><span class="terminal-cursor"></span></span>
           </div>
         </div>
       </div>
@@ -288,12 +309,16 @@
     <section class="testimonios" id="testimonios" aria-labelledby="testimonios-title">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" id="testimonios-title">Lo que dicen de nosotros</h2>
+          <span class="code-comment">logs — lo que dicen nuestros clientes</span>
+          <h2 class="section-title" id="testimonios-title">Opiniones</h2>
           <p class="section-desc">La confianza se construye día a día. Estas son las opiniones de quienes ya confían en SC Tecnología.</p>
         </div>
         <div class="testimonios-grid">
           <blockquote class="testimonio-card">
-            <div class="testimonio-stars" aria-label="5 estrellas">★★★★★</div>
+            <div class="testimonio-meta">
+              <span class="testimonio-stars">★★★★★</span>
+              <span class="testimonio-timestamp">[2026-03-15]</span>
+            </div>
             <p class="testimonio-text">"Desde que SC Tecnología lleva el mantenimiento de nuestros equipos, no hemos tenido ni un solo problema. Responden rápido y hablan claro."</p>
             <footer class="testimonio-author">
               <div class="testimonio-avatar">CL</div>
@@ -304,7 +329,10 @@
             </footer>
           </blockquote>
           <blockquote class="testimonio-card">
-            <div class="testimonio-stars" aria-label="5 estrellas">★★★★★</div>
+            <div class="testimonio-meta">
+              <span class="testimonio-stars">★★★★★</span>
+              <span class="testimonio-timestamp">[2026-02-22]</span>
+            </div>
             <p class="testimonio-text">"Me hicieron la página web para mi negocio. Quedó exactamente como la imaginaba y encima me explicaron todo el proceso sin tecnicismos."</p>
             <footer class="testimonio-author">
               <div class="testimonio-avatar">MR</div>
@@ -315,7 +343,10 @@
             </footer>
           </blockquote>
           <blockquote class="testimonio-card">
-            <div class="testimonio-stars" aria-label="5 estrellas">★★★★★</div>
+            <div class="testimonio-meta">
+              <span class="testimonio-stars">★★★★★</span>
+              <span class="testimonio-timestamp">[2026-01-10]</span>
+            </div>
             <p class="testimonio-text">"Soporte rápido, cercano y eficaz. Resolvieron una incidencia informática en menos de 2 horas. Muy recomendable para autónomos."</p>
             <footer class="testimonio-author">
               <div class="testimonio-avatar">JG</div>
@@ -332,42 +363,42 @@
     <section class="contact" id="contacto" aria-labelledby="contact-title">
       <div class="container contact-inner">
         <div class="contact-info">
-          <span class="section-tag">Contacto</span>
-          <h2 class="section-title" id="contact-title">Hablemos sin compromiso</h2>
+          <span class="code-comment">contact — hablemos sin compromiso</span>
+          <h2 class="section-title" id="contact-title">Contacto</h2>
           <p class="contact-desc">Cuéntame qué necesitas y te respondo en menos de 24 horas. Estoy en Valencia, pero atiendo a toda la Comunidad Valenciana de forma remota o presencial.</p>
           <div class="contact-details">
             <div class="contact-detail-item">
-              <strong>WhatsApp</strong>
+              <strong>// whatsapp</strong>
               <a href="https://wa.me/34644176695" target="_blank" rel="noopener">+34 644 176 695</a>
             </div>
             <div class="contact-detail-item">
-              <strong>Email</strong>
+              <strong>// email</strong>
               <a href="mailto:contacto@sctecnologia.es">contacto@sctecnologia.es</a>
             </div>
             <div class="contact-detail-item">
-              <strong>Web</strong>
+              <strong>// web</strong>
               <a href="https://www.sctecnologia.es">www.sctecnologia.es</a>
             </div>
           </div>
         </div>
         <form class="contact-form" id="contactForm" aria-label="Formulario de contacto">
           <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" required placeholder="Tu nombre" autocomplete="name">
+            <label for="name" class="form-label-code">name — tu nombre</label>
+            <input type="text" id="name" name="name" required placeholder="Escribe aquí tu nombre..." autocomplete="name">
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="tu@email.com" autocomplete="email">
+            <label for="email" class="form-label-code">email — tu correo</label>
+            <input type="email" id="email" name="email" required placeholder="Escribe aquí tu email..." autocomplete="email">
           </div>
           <div class="form-group">
-            <label for="phone">Teléfono (opcional)</label>
-            <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000" autocomplete="tel">
+            <label for="phone" class="form-label-code">phone — teléfono (opcional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="Escribe aquí tu teléfono..." autocomplete="tel">
           </div>
           <div class="form-group">
-            <label for="message">¿En qué puedo ayudarte?</label>
-            <textarea id="message" name="message" rows="4" required placeholder="Cuéntame qué necesitas: una web, mantenimiento, soporte..."></textarea>
+            <label for="message" class="form-label-code">message — ¿en qué puedo ayudarte?</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Cuéntame qué necesitas..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+          <button type="submit" class="btn btn-primary btn-block">Enviar mensaje →</button>
           <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
         </form>
       </div>
@@ -380,31 +411,31 @@
         <div class="footer-brand">
           <a href="." class="footer-logo">
             <img src="img/logo-icon-white.svg" alt="SC Tecnología" class="footer-logo-img">
-            <span>SC <span class="footer-logo-light">Tecnología</span></span>
+            <span>[ SC <span class="footer-logo-light">Tecnología</span> ]</span>
           </a>
-          <p class="footer-desc">Tu departamento IT de confianza. Desarrollo web, soporte técnico y mantenimiento informático para autónomos y pymes en Valencia.</p>
+          <p class="footer-desc">/* Tu departamento IT de confianza. Desarrollo web, soporte técnico y mantenimiento informático para autónomos y pymes en Valencia. */</p>
         </div>
         <div class="footer-links">
-          <h4 class="footer-heading">Servicios</h4>
+          <h4 class="footer-heading">// servicios</h4>
           <ul>
-            <li><a href="servicios/desarrollo-web/">Desarrollo web</a></li>
-            <li><a href="servicios/mantenimiento-informatico/">Mantenimiento informático</a></li>
-            <li><a href="servicios/soporte-tecnico/">Soporte técnico</a></li>
-            <li><a href="servicios/bases-datos-aplicaciones/">Bases de datos</a></li>
-            <li><a href="servicios/seguridad-copias-seguridad/">Seguridad y copias</a></li>
+            <li><a href="servicios/desarrollo-web/">desarrollo-web</a></li>
+            <li><a href="servicios/mantenimiento-informatico/">mantenimiento</a></li>
+            <li><a href="servicios/soporte-tecnico/">soporte-tecnico</a></li>
+            <li><a href="servicios/bases-datos-aplicaciones/">bases-datos</a></li>
+            <li><a href="servicios/seguridad-copias-seguridad/">seguridad</a></li>
           </ul>
         </div>
         <div class="footer-links">
-          <h4 class="footer-heading">Empresa</h4>
+          <h4 class="footer-heading">// empresa</h4>
           <ul>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="precios/">Precios</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#sobre-mi">whoami</a></li>
+            <li><a href="precios/">precios</a></li>
+            <li><a href="#testimonios">logs</a></li>
+            <li><a href="#contacto">contacto</a></li>
           </ul>
         </div>
         <div class="footer-contact">
-          <h4 class="footer-heading">Contacto</h4>
+          <h4 class="footer-heading">// contacto</h4>
           <ul>
             <li><a href="https://wa.me/34644176695" target="_blank" rel="noopener">+34 644 176 695</a></li>
             <li><a href="mailto:contacto@sctecnologia.es">contacto@sctecnologia.es</a></li>
@@ -415,8 +446,8 @@
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p>&copy; 2026 SC Tecnología. Todos los derechos reservados.</p>
-        <p class="footer-made">Diseñado y desarrollado con dedicación en Valencia</p>
+        <p>© 2026 SC Tecnología — All rights reserved</p>
+        <p class="footer-made">Made with dedication in Valencia</p>
       </div>
     </div>
   </footer>

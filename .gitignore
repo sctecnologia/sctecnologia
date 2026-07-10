@@ -1,3 +1,5 @@
 *.png.bak
 doc/
 logos/export/*.png
+.vercel
+.env*
