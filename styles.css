@@ -1122,3 +1122,109 @@
     .container { padding: 0 14px; }
   }
 }
+
+/* === COOKIE CONSENT BANNER === */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--color-primary-dark, #0F2A45);
+  color: var(--color-white);
+  padding: 16px 24px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.cookie-banner.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cookie-banner-inner {
+  max-width: var(--max-width, 1120px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cookie-banner p {
+  margin: 0;
+  flex: 1;
+  min-width: 240px;
+  color: rgba(255,255,255,0.9);
+}
+
+.cookie-banner a {
+  color: var(--color-accent, #F28C28);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.cookie-banner a:hover {
+  color: var(--color-accent-hover, #E07A14);
+}
+
+.cookie-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: var(--radius-sm, 6px);
+  font-family: var(--font-family, 'Manrope', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cookie-btn-accept {
+  background: var(--color-accent, #F28C28);
+  color: var(--color-white);
+}
+
+.cookie-btn-accept:hover {
+  background: var(--color-accent-hover, #E07A14);
+  transform: translateY(-1px);
+}
+
+.cookie-btn-more {
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  text-decoration: underline;
+  padding: 10px 4px;
+}
+
+.cookie-btn-more:hover {
+  color: var(--color-white);
+}
+
+@media (max-width: 640px) {
+  .cookie-banner {
+    padding: 14px 16px;
+  }
+  .cookie-banner-inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .cookie-banner p {
+    min-width: unset;
+  }
+  .cookie-banner-actions {
+    justify-content: center;
+  }
+}

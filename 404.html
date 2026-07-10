@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Página no encontrada | SC Tecnología</title>
+  <meta name="description" content="La página que buscas no existe. Vuelve al inicio o revisa los servicios de SC Tecnología.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://www.sctecnologia.es/">
+  <meta property="og:title" content="404 — Página no encontrada | SC Tecnología">
+  <meta property="og:description" content="La página que buscas no existe. Vuelve al inicio.">
+  <meta property="og:url" content="https://www.sctecnologia.es/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.sctecnologia.es/img/logo.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="404 — Página no encontrada | SC Tecnología">
+  <meta name="twitter:description" content="La página que buscas no existe. Vuelve al inicio.">
+  <meta name="twitter:image" content="https://www.sctecnologia.es/img/logo.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/logo-icon.svg">
+  <link rel="apple-touch-icon" href="img/logo-icon.svg">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .error-page {
+      min-height: calc(100vh - var(--header-height) - 100px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .error-terminal {
+      background: var(--color-terminal-bg);
+      border-radius: var(--radius-lg);
+      padding: 0;
+      max-width: 560px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    .error-terminal-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .error-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .error-dot--red { background: #ff5f56; }
+    .error-dot--yellow { background: #ffbd2e; }
+    .error-dot--green { background: #27c93f; }
+
+    .error-terminal-title {
+      font-family: var(--font-code);
+      font-size: 0.75rem;
+      color: var(--color-terminal-comment);
+      margin-left: 8px;
+    }
+
+    .error-terminal-body {
+      padding: 32px 28px 36px;
+      text-align: left;
+    }
+
+    .error-code {
+      font-family: var(--font-code);
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--color-terminal-red);
+      line-height: 1;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .error-line {
+      font-family: var(--font-code);
+      font-size: 0.85rem;
+      color: var(--color-terminal-text);
+      display: block;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+
+    .error-line--prompt {
+      color: var(--color-terminal-green);
+      margin-top: 16px;
+    }
+
+    .error-line--comment {
+      color: var(--color-terminal-comment);
+      font-style: italic;
+    }
+
+    .error-line--highlight {
+      color: var(--color-accent);
+    }
+
+    .error-cursor {
+      display: inline-block;
+      width: 8px;
+      height: 16px;
+      background: var(--color-terminal-text);
+      animation: blink 1s step-end infinite;
+      vertical-align: text-bottom;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .error-actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .error-actions .btn {
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 480px) {
+      .error-code { font-size: 3rem; }
+      .error-terminal-body { padding: 24px 20px 28px; }
+      .error-line { font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="." class="logo" aria-label="SC Tecnología — Ir al inicio">
+        <img src="img/logo-icon.svg" alt="" class="logo-img" aria-hidden="true">
+        <span class="logo-text"><span class="logo-bracket">[</span> SC Tecnología <span class="logo-bracket">]</span></span>
+      </a>
+      <nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href=".#servicios" class="nav-link">servicios</a></li>
+          <li><a href="precios/" class="nav-link">precios</a></li>
+          <li><a href=".#sobre-mi" class="nav-link">sobre mí</a></li>
+          <li><a href=".#contacto" class="nav-link nav-cta">contacto</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="error-page">
+    <div class="error-terminal">
+      <div class="error-terminal-header">
+        <span class="error-dot error-dot--red"></span>
+        <span class="error-dot error-dot--yellow"></span>
+        <span class="error-dot error-dot--green"></span>
+        <span class="error-terminal-title">sc@terminal:~/error</span>
+      </div>
+      <div class="error-terminal-body">
+        <span class="error-line error-line--comment">// La página que buscas no está aquí</span>
+
+        <span class="error-code">404</span>
+
+        <span class="error-line">sc@sc: ~ $ <span style="color:var(--color-terminal-red)">curl -s https://sctecnologia.es/lo-que-buscas</span></span>
+        <span class="error-line">curl: (404) Not Found — el recurso solicitado no existe</span>
+
+        <span class="error-line error-line--prompt">sc@sc: ~ $ ./buscar --alternativas</span>
+        <span class="error-line error-line--highlight">Ejecutando análisis de rutas disponibles…</span>
+        <span class="error-line"><span style="color:var(--color-terminal-green)">→</span> <a href="." style="color:var(--color-terminal-green);text-decoration:underline;">/</a>                <span style="color:var(--color-terminal-comment)">Inicio</span></span>
+        <span class="error-line"><span style="color:var(--color-terminal-green)">→</span> <a href="precios/" style="color:var(--color-terminal-green);text-decoration:underline;">/precios</a>           <span style="color:var(--color-terminal-comment)">Planes y precios</span></span>
+        <span class="error-line"><span style="color:var(--color-terminal-green)">→</span> <a href=".#servicios" style="color:var(--color-terminal-green);text-decoration:underline;">/servicios</a>         <span style="color:var(--color-terminal-comment)">Catálogo de servicios</span></span>
+        <span class="error-line"><span style="color:var(--color-terminal-green)">→</span> <a href=".#contacto" style="color:var(--color-terminal-green);text-decoration:underline;">/contacto</a>          <span style="color:var(--color-terminal-comment)">Hablemos</span></span>
+
+        <span class="error-line error-line--prompt">sc@sc: ~ $ <span class="error-cursor"></span></span>
+
+        <div class="error-actions">
+          <a href="." class="btn btn-primary">Volver al inicio</a>
+          <a href=".#contacto" class="btn btn-code">Contactar →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="." class="footer-logo">
+            <img src="img/logo-icon-white.svg" alt="SC Tecnología" class="footer-logo-img">
+            <span>[ SC <span class="footer-logo-light">Tecnología</span> ]</span>
+          </a>
+          <p class="footer-desc">/* Tu departamento IT de confianza. Desarrollo web, soporte técnico y mantenimiento informático para autónomos y pymes en Valencia. */</p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">// servicios</h4>
+          <ul>
+            <li><a href="servicios/desarrollo-web/">desarrollo-web</a></li>
+            <li><a href="servicios/mantenimiento-informatico/">mantenimiento</a></li>
+            <li><a href="servicios/soporte-tecnico/">soporte-técnico</a></li>
+            <li><a href="servicios/bases-datos-aplicaciones/">bases-datos</a></li>
+            <li><a href="servicios/seguridad-copias-seguridad/">seguridad</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">// empresa</h4>
+          <ul>
+            <li><a href=".#sobre-mi">sobre mí</a></li>
+            <li><a href="precios/">precios</a></li>
+            <li><a href=".#testimonios">logs</a></li>
+            <li><a href=".#contacto">contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-heading">// contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/34644176695" target="_blank" rel="noopener">+34 644 176 695</a></li>
+            <li><a href="mailto:contacto@sctecnologia.es">contacto@sctecnologia.es</a></li>
+            <li><span>Valencia, España</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 SC Tecnología — <a href="aviso-legal/">Aviso Legal</a> — <a href="privacidad/">Privacidad</a> — <a href="cookies/">Cookies</a></p>
+        <p class="footer-made">Made with dedication in Valencia</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/34644176695" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <aside class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+    <div class="cookie-banner-inner">
+      <p>Usamos cookies propias y de terceros para mejorar tu experiencia. Si sigues navegando, consideramos que aceptas su uso. <a href="cookies/" target="_blank">Más información</a></p>
+      <div class="cookie-banner-actions">
+        <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Aceptar</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>

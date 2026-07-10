@@ -61,3 +61,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// === COOKIE CONSENT BANNER ===
+const cookieBanner = document.getElementById('cookieBanner');
+const cookieAccept = document.getElementById('cookieAccept');
+
+function getCookie(name) {
+  return document.cookie.split('; ').find(row => row.startsWith(name + '='));
+}
+
+if (cookieBanner && cookieAccept) {
+  // Solo mostrar si no ha aceptado ya
+  if (!getCookie('cookies_accepted')) {
+    // Pequeño retardo para que aparezca con la animación
+    setTimeout(() => cookieBanner.classList.add('show'), 500);
+  }
+
+  cookieAccept.addEventListener('click', () => {
+    // Guardar consentimiento por 1 año
+    document.cookie = 'cookies_accepted=1; max-age=31536000; path=/; SameSite=Lax';
+    cookieBanner.classList.remove('show');
+    // Ocultar después de la animación
+    setTimeout(() => { cookieBanner.style.display = 'none'; }, 400);
+  });
+}
